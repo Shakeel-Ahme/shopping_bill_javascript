@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Shopping Bill</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        body {
+            background-color: gray;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .main {
+          
+            width: 30vw;
+            margin: auto;
+            padding: 10px;;
+            background-color: white;
+           
+        }
+        .main h1 {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+        .main h6 {
+            font-size: 12px;
+        }
+        .main h3 {
+            background-color: black;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+        }
+        .main h2 {
+            text-align: center;
+            font-size: 17px;
+        }
+        .memo {
+            font-size: 14px;;
+        }
+        table {
+            width: 100%;
+        }
+        table th {
+            background-color: black;
+            color: white;
+        }
+        hr {
+            margin-top: 5px;
+        }
+        .items-row {
+            font-size: 14px;
+            padding-bottom: px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var sugar = Number(prompt("Product: Sugar\nPrice: 92/kg"));
+        var oil = Number(prompt("Product: Cooking Oil\nPrice:225/kg"));
+        var tea = Number(prompt("Product: Tea\nPrice: 550/kg"));
+        var handwash = Number(prompt("Product: Hand-wash\n Price:150/per"));
+        var soap = Number(prompt("Product: Soap\nPrice:Rs48"));
+        var received = Number(prompt("Enter Received Cash amount here"));
+        var total = sugar*92+oil*225+tea*550+handwash*150+soap*150;
+        var changedue = received-total;
+      
+
+
+        document.write("<div class= main>");
+        document.write("<h1>SI Mart City Hyderabad</h1>");
+        document.write("<h6>Contact:(0311-3873003)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax:</h6>");
+        document.write("<h3>Sale Receipt</h3>");
+        document.write("<h2>Original Slip</h2>");
+        document.write("<p class=memo>Memo #:0269083.1.003.S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pos Name: Till_ct03_po<br>Date:&nbsp;&nbsp;&nbsp;&nbsp;Mon,14-June-2021&nbsp;&nbsp;&nbsp;&nbsp;Time: 10:39Am<br>User:&nbsp;&nbsp;M.Hammad&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shift: 10am-10pm</p>");
+        document.write("<table><tr><th>Qty</th><th>Description</th><th>Price</th><th>Total</th></tr>");
+        document.write("<tr><td>"+sugar+"</td><td>Sugar</td><td>92</td><td>"+sugar*92+"</td></tr>");
+        document.write("<tr><td>"+oil+"</td><td>Cooking-Oil</td><td>225</td><td>"+oil*225+"</td></tr>");
+        document.write("<tr><td>"+tea+"</td><td>Tea</td><td>550</td><td>"+tea*550+"</td></tr>");
+        document.write("<tr><td>"+handwash+"</td><td>Handwash</td><td>150</td><td>"+handwash*150+"</td></tr>");
+        document.write("<tr><td>"+soap+"</td><td>Soap</td><td>48</td><td>"+soap*48+"</td></tr></table>");
+        document.write("<hr><p class= items-row>No of items=5 &nbsp;&nbsp;&nbsp;Total Quantity ="+sugar+oil+tea+handwash+soap+"Total=<b>"+total+"</b></p>");
+        document.write("<p class= items-row><b>Net Value:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+total+"</b></p>");
+        document.write("<p class= items-row>Cash:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>"+received+"</b></p>");
+        document.write("<p class= items-row>Total Received:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>"+received+"</b></p>");
+        document.write("<p class= items-row><b>Change Due:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        if (changedue>=total){
+            document.write(changedue);
+        }    
+        else {
+            document.write("You have to pay"+changedue+"more</b></p>");
+        }
+        document.write("<br><h6 align=center>(02696080.1.003.S)</h6>");
+        document.write("<p class= items-row>Sale Returns within 7 days from purchase date during time 10Am to 10PM Thanks<br><br>www.facebook.com/sisupermart<br><br>Print Date: 14-June-2021&nbsp;&nbsp;&nbsp;&nbsp;Print Time:&nbsp;&nbsp;&nbsp;10:33 Am<hr>Designed & Developed by Shakeel Ahmed Indher</p>");
+        document.write("<h5 align=center>http://www.shakeel.com</h5>")
+        document.write("</div>");
+    </script>
+</body>
+</html>
